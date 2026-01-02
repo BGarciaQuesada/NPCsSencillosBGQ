@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
 
 
@@ -11,6 +12,7 @@ public class DungeonGenerator : MonoBehaviour
     [Header("Ajustes del Mapa")]
     [SerializeField] private int difficulty = 2;      // Controla el número de salas
     [SerializeField] private float roomSize = 20f;    // Tamaño real de cada sala (escala 2,1,2)
+    [SerializeField] private NavMeshSurface navMeshSurface;
 
     // Número final de salas (derivado de dificultad)
     private int roomsToGenerate;
@@ -32,6 +34,12 @@ public class DungeonGenerator : MonoBehaviour
     private void Start()
     {
         GenerateMap();
+
+        // Una vez instanciadas todas las salas, bakear el NavMesh
+        if (navMeshSurface != null)
+        {
+            navMeshSurface.BuildNavMesh();
+        }
     }
 
     void GenerateMap()
