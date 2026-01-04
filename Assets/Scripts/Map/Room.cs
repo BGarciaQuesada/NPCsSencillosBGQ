@@ -8,6 +8,7 @@ public class Room : MonoBehaviour
     [Header("Spawn Points")]
     public Transform[] enemySpawnPoints;
     public Transform[] orbSpawnPoints;
+    public Transform playerSpawnPoint;
 
     [Header("Patrol Points")]
     public Transform[] patrolPoints;

@@ -536,6 +536,9 @@ MonoBehaviour:
   navMeshSurface: {fileID: 1122190366}
   npcPrefab: {fileID: 426256255585811730, guid: 354c5ba8f4cf9b244a6c22ac2b101e22, type: 3}
   orbPrefab: {fileID: 820325296452058281, guid: 185eeb20bdaf5e44baeafdd3dae60aaa, type: 3}
+  playerPrefab: {fileID: 4040671334803608238, guid: 59bde687df40e234a8dbac5afdb832cc, type: 3}
+  playerSpawnRoomPrefab: {fileID: 3476583431012864891, guid: 9298ab341538e2147a4cabf7d78fc160, type: 3}
+  playerTransform: {fileID: 0}
 --- !u!4 &1814454593
 Transform:
   m_ObjectHideFlags: 0

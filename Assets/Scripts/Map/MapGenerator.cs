@@ -17,6 +17,11 @@ public class DungeonGenerator : MonoBehaviour
     [Header ("Prefabs")]
     [SerializeField] private GameObject npcPrefab;
     [SerializeField] private GameObject orbPrefab;
+    [SerializeField] private GameObject playerPrefab;
+
+    [Header("Spawn")]
+    [SerializeField] private GameObject playerSpawnRoomPrefab;  // sala especial donde empieza el jugador
+    [SerializeField] private Transform playerTransform;         // referencia al jugador para moverlo al spawn
 
     // Número final de salas (derivado de dificultad)
     private int roomsToGenerate;
@@ -55,8 +60,8 @@ public class DungeonGenerator : MonoBehaviour
 
         spawnedRooms.Clear();
 
-        // Crea sala inicial en el centro
-        CreateRoom(Vector2Int.zero);
+        // Crea sala inicial en el centro (modificado para que ahora sea sala de spawn)
+        CreateRoom(Vector2Int.zero, playerSpawnRoomPrefab);
 
         // Hasta llegar al total...
         while (spawnedRooms.Count < roomsToGenerate)
@@ -79,12 +84,27 @@ public class DungeonGenerator : MonoBehaviour
 
         // Una vez se hayan creado, pasa a abrir conexiones
         UpdateRoomSides();
+
+        // Todo listo: spawnear jugador
+        if (playerPrefab != null)
+        {
+            Room spawnRoom = spawnedRooms[Vector2Int.zero];
+
+            //¿ Hay punto de spawn asignado? Ahí. ¿No? Lo calcula automáticamente
+            Vector3 spawnPos = spawnRoom.playerSpawnPoint != null
+                ? spawnRoom.playerSpawnPoint.position
+                : spawnRoom.transform.position + Vector3.up * 1.5f;
+
+            GameObject playerGO = Instantiate(playerPrefab, spawnPos, Quaternion.identity);
+        }
     }
 
-    void CreateRoom(Vector2Int gridPos)
+    // null para parametro opcional de habitacion (aka, para pasarle la de spawn sin liar lo de generar randoms)
+    void CreateRoom(Vector2Int gridPos, GameObject prefab = null)
     {
         // Elegir prefab aleatorio de la lista
-        GameObject prefab = roomPrefabs[Random.Range(0, roomPrefabs.Length)];
+        if(prefab == null)
+        prefab = roomPrefabs[Random.Range(0, roomPrefabs.Length)];
 
         // Convertir la posición de cuadrícula a coordenadas del mundo
         Vector3 worldPos = new Vector3(

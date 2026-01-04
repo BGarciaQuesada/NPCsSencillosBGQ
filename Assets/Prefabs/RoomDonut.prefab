@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 6274399921001685673}
   - component: {fileID: 941248314469385935}
   - component: {fileID: 3104360970252174907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DonutWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1899,7 +1899,7 @@ GameObject:
   - component: {fileID: 481339814070047603}
   - component: {fileID: 9101327258354149777}
   - component: {fileID: 6638115411021163632}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
