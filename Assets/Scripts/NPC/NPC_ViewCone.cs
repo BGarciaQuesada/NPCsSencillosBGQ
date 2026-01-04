@@ -5,6 +5,8 @@ using UnityEngine;
 // Esta clase se encarga de DIBUJAR el cono de visión visible en escena. NO DETECTA, solo representa.
 public class NPC_ViewCone : MonoBehaviour
 {
+    // [!] Por el amor de jesucristo asignale los scripts a las cosas belen
+
     [SerializeField] private NPC_Vision vision;
     [SerializeField] private NPC_Controller controller;
     [SerializeField] private MeshFilter meshFilter;

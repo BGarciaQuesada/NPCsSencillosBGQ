@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class NPC_Controller : MonoBehaviour
 {
+    // [!] Por el amor de jesucristo asignale los scripts a las cosas belen
     public enum NPCState
     {
         Patrol,   

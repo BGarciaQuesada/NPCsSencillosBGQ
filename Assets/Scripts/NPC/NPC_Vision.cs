@@ -2,9 +2,10 @@ using UnityEngine;
 
 
 // Esta clase gestiona la LÓGICA de la visión del NPC (cono + obstáculos). NO DIBUJA, solo detecta.
-
 public class NPC_Vision : MonoBehaviour
 {
+    // [!] Por el amor de jesucristo asignale los scripts a las cosas belen
+
     [SerializeField] private Transform player;
     [SerializeField] private float viewRadius = 8f;
     [SerializeField] private float viewAngle = 90f;

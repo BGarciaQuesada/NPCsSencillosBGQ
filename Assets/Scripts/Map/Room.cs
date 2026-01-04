@@ -5,11 +5,23 @@ public class Room : MonoBehaviour
 {
     public Vector2Int gridPosition;
 
+    [Header("Spawn Points")]
+    public Transform[] enemySpawnPoints;
+    public Transform[] orbSpawnPoints;
+
+    [Header("Patrol Points")]
+    public Transform[] patrolPoints;
+
     [Header("Tapones")]
     [SerializeField] private GameObject northBlock;
     [SerializeField] private GameObject southBlock;
     [SerializeField] private GameObject eastBlock;
     [SerializeField] private GameObject westBlock;
+
+    void Awake()
+    {
+        Debug.Log($"{name} tiene {patrolPoints.Length} patrol points");
+    }
 
     public void SetSideActive(Vector2Int direction, bool active)
     {

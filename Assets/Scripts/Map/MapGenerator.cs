@@ -14,6 +14,10 @@ public class DungeonGenerator : MonoBehaviour
     [SerializeField] private float roomSize = 20f;    // Tamaño real de cada sala (escala 2,1,2)
     [SerializeField] private NavMeshSurface navMeshSurface;
 
+    [Header ("Prefabs")]
+    [SerializeField] private GameObject npcPrefab;
+    [SerializeField] private GameObject orbPrefab;
+
     // Número final de salas (derivado de dificultad)
     private int roomsToGenerate;
 
@@ -40,6 +44,8 @@ public class DungeonGenerator : MonoBehaviour
         {
             navMeshSurface.BuildNavMesh();
         }
+
+        SpawnContents();
     }
 
     void GenerateMap()
@@ -122,6 +128,34 @@ public class DungeonGenerator : MonoBehaviour
                 // Si NO hay vecino -> activamos pared
                 // Si SÍ hay vecino -> desactivamos pared
                 room.SetSideActive(dir, !hasNeighbor);
+            }
+        }
+    }
+
+    void SpawnContents()
+    {
+        Debug.Log("Adelante gacheto-SpawnContents.");
+        foreach (Room room in spawnedRooms.Values)
+        {
+            // ENEMIGOS
+            foreach (Transform spawn in room.enemySpawnPoints)
+            {
+                GameObject npcGO = Instantiate(npcPrefab, spawn.position, spawn.rotation);
+                NPC_Patrol npc = npcGO.GetComponent<NPC_Patrol>();
+
+                Debug.Log("Enemigo spawneado.");
+
+                if (npc != null && room.patrolPoints.Length > 0)
+                {
+                    npc.SetPatrolPoints(room.patrolPoints);
+                }
+            }
+
+            // ORBES
+            foreach (Transform spawn in room.orbSpawnPoints)
+            {
+                Instantiate(orbPrefab, spawn.position, spawn.rotation);
+                Debug.Log("Orbe spawneado.");
             }
         }
     }
