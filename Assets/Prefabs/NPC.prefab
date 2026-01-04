@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 753943883755526195}
   - component: {fileID: 212370515670463388}
   - component: {fileID: 7339444836143983801}
-  - component: {fileID: 1025595833782374925}
+  - component: {fileID: 1430998071554281919}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -165,7 +165,7 @@ MonoBehaviour:
   viewMeshFilter: {fileID: 2956071020746864378}
   viewMeshRenderer: {fileID: 5938392271956721791}
   viewMeshResolution: 20
---- !u!114 &1025595833782374925
+--- !u!114 &1430998071554281919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,9 +174,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 426256255585811730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e56b0f4cecc6234faa397f0946a24fa, type: 3}
+  m_Script: {fileID: 11500000, guid: be012f795d60eb945b63f8f3d809a5b9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPC_Patrol
+  m_EditorClassIdentifier: Assembly-CSharp::NPCPatrol
   patrolPoints: []
 --- !u!1 &6008467770600555897
 GameObject:

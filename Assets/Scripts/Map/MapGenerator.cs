@@ -161,7 +161,7 @@ public class DungeonGenerator : MonoBehaviour
             foreach (Transform spawn in room.enemySpawnPoints)
             {
                 GameObject npcGO = Instantiate(npcPrefab, spawn.position, spawn.rotation);
-                NPC_Patrol npc = npcGO.GetComponent<NPC_Patrol>();
+                NPCPatrol npc = npcGO.GetComponent<NPCPatrol>();
 
                 Debug.Log("Enemigo spawneado.");
 
