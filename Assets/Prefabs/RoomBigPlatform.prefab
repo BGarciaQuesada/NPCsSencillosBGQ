@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5398485416283137344}
   - component: {fileID: 6432875649665832177}
   - component: {fileID: 2216620478838765289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TaponEste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 1269775084538964458}
   - component: {fileID: 8339051230405373803}
   - component: {fileID: 1748107262373672400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pared Tras Der.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 1039997239840005607}
   - component: {fileID: 7613602331930346013}
   - component: {fileID: 1126535431708952055}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pared Del Izq.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 1628114208191641702}
   - component: {fileID: 3267579975431369458}
   - component: {fileID: 703328815148180674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pared LIzq Izq.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 5751698754429982365}
   - component: {fileID: 2752940484372852545}
   - component: {fileID: 3802524539127779344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pared Del. Der.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 9125004564000222737}
   - component: {fileID: 2259522977665846914}
   - component: {fileID: 6334733521856675801}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TaponOeste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 7610991302678313972}
   - component: {fileID: 8238977790298712869}
   - component: {fileID: 7169515310399196784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pared LIzq Der.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -852,7 +852,7 @@ GameObject:
   - component: {fileID: 1117947433360783767}
   - component: {fileID: 1271309768352913167}
   - component: {fileID: 3765894472463301071}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pared LDer Der.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1002,7 +1002,7 @@ GameObject:
   - component: {fileID: 6086553920152008155}
   - component: {fileID: 3807081726338978355}
   - component: {fileID: 2524654667029224604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TaponSur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1179,7 +1179,7 @@ GameObject:
   - component: {fileID: 8022352580188893018}
   - component: {fileID: 8785984984614985420}
   - component: {fileID: 6813874311698839585}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TaponNorte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1619,6 +1619,7 @@ MonoBehaviour:
   enemySpawnPoints: []
   orbSpawnPoints:
   - {fileID: 7797996732675492492}
+  playerSpawnPoint: {fileID: 0}
   patrolPoints: []
   northBlock: {fileID: 6425581815379772056}
   southBlock: {fileID: 5559401520984740716}
@@ -1636,7 +1637,7 @@ GameObject:
   - component: {fileID: 1547230128165268815}
   - component: {fileID: 3224015063866483719}
   - component: {fileID: 3099235862197570146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pared Tras Izq.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1747,7 +1748,7 @@ GameObject:
   - component: {fileID: 8966682024722812452}
   - component: {fileID: 408341668216991332}
   - component: {fileID: 1004913873878769324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pared LDer Izq.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
