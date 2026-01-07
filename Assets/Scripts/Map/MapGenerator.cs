@@ -41,7 +41,7 @@ public class MapGenerator : MonoBehaviour
         Vector2Int.left
     };
 
-    // Singleton
+    // Singleton (que ya no tiene mucho punto porque solo es para la escena de juego, quitar si eso)
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -51,11 +51,12 @@ public class MapGenerator : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
+    // Como el Start (hasta donde sé) vuelve a cargarse cada vez que se hace load scene, no hace falta convertirlo en otro tipo
     private void Start()
     {
+        difficulty = GameManager.Instance.difficulty;
         GenerateMap();
 
         // Una vez instanciadas todas las salas, bakear el NavMesh

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Esta clase almacena el valor de dificultad del boton y especifica su método al hacer clic.
 public class ButtonBehavior : MonoBehaviour
 {
     [Header("Valor de Dificultad")]
@@ -8,14 +9,6 @@ public class ButtonBehavior : MonoBehaviour
 
     public void LoadMap()
     {
-        // Verifica si la instancia existe antes de modificar la dificultad
-        if (MapGenerator.Instance != null)
-        {
-            MapGenerator.Instance.difficulty = difficultyValue;
-            Debug.Log($"Dificultad establecida a: {difficultyValue}");
-        }
-
-        // Ahora carga la escena
-        SceneManager.LoadScene("GameScene");
+        GameManager.Instance.StartNewGame(difficultyValue);
     }
 }
