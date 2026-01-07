@@ -626,7 +626,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -750,7 +751,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1122190365
+--- !u!1 &906630066
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -758,8 +759,66 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1122190367}
-  - component: {fileID: 1122190366}
+  - component: {fileID: 906630068}
+  - component: {fileID: 906630067}
+  m_Layer: 0
+  m_Name: MapGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &906630067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906630066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5edfdc4522541d64eac590e7dcbe2c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonGenerator
+  roomPrefabs:
+  - {fileID: 8104884156170948999, guid: 677fa260da475c04899c79d25f36e350, type: 3}
+  - {fileID: 1299508188090877833, guid: 173ab00cf788104458a5fae0d591a540, type: 3}
+  - {fileID: 6732657603001804771, guid: 849a7b2b47ded434a9a6d8f1c779473e, type: 3}
+  - {fileID: 4256533971835617804, guid: 9749ec923cb58c1408e5e40c581a8c78, type: 3}
+  - {fileID: 4989162246072798927, guid: b74b134aaf60ea94cb0d990b49a79eec, type: 3}
+  difficulty: 2
+  roomSize: 20
+  navMeshSurface: {fileID: 1479567292}
+  npcPrefab: {fileID: 426256255585811730, guid: 354c5ba8f4cf9b244a6c22ac2b101e22, type: 3}
+  orbPrefab: {fileID: 820325296452058281, guid: 185eeb20bdaf5e44baeafdd3dae60aaa, type: 3}
+  playerPrefab: {fileID: 4040671334803608238, guid: 59bde687df40e234a8dbac5afdb832cc, type: 3}
+  playerSpawnRoomPrefab: {fileID: 3476583431012864891, guid: 9298ab341538e2147a4cabf7d78fc160, type: 3}
+  playerTransform: {fileID: 0}
+--- !u!4 &906630068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906630066}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1479567291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1479567293}
+  - component: {fileID: 1479567292}
   m_Layer: 0
   m_Name: NavMeshManager
   m_TagString: Untagged
@@ -767,13 +826,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1122190366
+--- !u!114 &1479567292
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122190365}
+  m_GameObject: {fileID: 1479567291}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
@@ -799,71 +858,13 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
---- !u!4 &1122190367
+--- !u!4 &1479567293
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122190365}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1814454591
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1814454593}
-  - component: {fileID: 1814454592}
-  m_Layer: 0
-  m_Name: MapGenerator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1814454592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814454591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5edfdc4522541d64eac590e7dcbe2c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DungeonGenerator
-  roomPrefabs:
-  - {fileID: 8104884156170948999, guid: 677fa260da475c04899c79d25f36e350, type: 3}
-  - {fileID: 1299508188090877833, guid: 173ab00cf788104458a5fae0d591a540, type: 3}
-  - {fileID: 6732657603001804771, guid: 849a7b2b47ded434a9a6d8f1c779473e, type: 3}
-  - {fileID: 4256533971835617804, guid: 9749ec923cb58c1408e5e40c581a8c78, type: 3}
-  - {fileID: 4989162246072798927, guid: b74b134aaf60ea94cb0d990b49a79eec, type: 3}
-  difficulty: 2
-  roomSize: 20
-  navMeshSurface: {fileID: 1122190366}
-  npcPrefab: {fileID: 426256255585811730, guid: 354c5ba8f4cf9b244a6c22ac2b101e22, type: 3}
-  orbPrefab: {fileID: 820325296452058281, guid: 185eeb20bdaf5e44baeafdd3dae60aaa, type: 3}
-  playerPrefab: {fileID: 4040671334803608238, guid: 59bde687df40e234a8dbac5afdb832cc, type: 3}
-  playerSpawnRoomPrefab: {fileID: 3476583431012864891, guid: 9298ab341538e2147a4cabf7d78fc160, type: 3}
-  playerTransform: {fileID: 0}
---- !u!4 &1814454593
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814454591}
+  m_GameObject: {fileID: 1479567291}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -981,7 +982,7 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 1814454593}
-  - {fileID: 1122190367}
   - {fileID: 1968720470}
   - {fileID: 319626971}
+  - {fileID: 906630068}
+  - {fileID: 1479567293}

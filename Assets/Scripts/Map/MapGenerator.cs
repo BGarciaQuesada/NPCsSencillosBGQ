@@ -2,16 +2,15 @@ using System.Collections.Generic;
 using Unity.AI.Navigation;
 using UnityEngine;
 
-
 // Esta clase se encarga de generar el mapa, inluyendo: instanciar habitaciones, buscar conexiones y enviarle a room que derribe tapones
-public class DungeonGenerator : MonoBehaviour
+public class MapGenerator : MonoBehaviour
 {
     [Header("Room Prefab")]
     [SerializeField] private GameObject[] roomPrefabs;
 
     [Header("Ajustes del Mapa")]
-    [SerializeField] private int difficulty = 2;      // Controla el número de salas
-    [SerializeField] private float roomSize = 20f;    // Tamaño real de cada sala (escala 2,1,2)
+    [SerializeField] public int difficulty;                 // Controla el número de salas
+    [SerializeField] private float roomSize = 20f;          // Tamaño real de cada sala (escala 2,1,2)
     [SerializeField] private NavMeshSurface navMeshSurface;
 
     [Header ("Prefabs")]
@@ -31,6 +30,8 @@ public class DungeonGenerator : MonoBehaviour
     // Value -> referencia a la Room
     private Dictionary<Vector2Int, Room> spawnedRooms = new Dictionary<Vector2Int, Room>();
 
+    public static MapGenerator Instance { get; private set; }
+
     // Direcciones posibles de conexión
     private Vector2Int[] directions =
     {
@@ -39,6 +40,19 @@ public class DungeonGenerator : MonoBehaviour
         Vector2Int.right,
         Vector2Int.left
     };
+
+    // Singleton
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     private void Start()
     {
@@ -55,8 +69,12 @@ public class DungeonGenerator : MonoBehaviour
 
     void GenerateMap()
     {
+        Debug.Log($"Dificultad recibida: {difficulty}");
+
         // Cuántas salas habrá según dificultad (mínimo 4, dificultad añade)
         roomsToGenerate = 4 + difficulty * 3;
+
+        Debug.Log($"Salas a generar al final: {roomsToGenerate}");
 
         spawnedRooms.Clear();
 
