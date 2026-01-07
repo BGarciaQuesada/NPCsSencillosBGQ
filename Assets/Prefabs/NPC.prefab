@@ -13,8 +13,10 @@ GameObject:
   - component: {fileID: 4958369700416413937}
   - component: {fileID: 753943883755526195}
   - component: {fileID: 212370515670463388}
-  - component: {fileID: 7339444836143983801}
+  - component: {fileID: 7237199459806321283}
   - component: {fileID: 1430998071554281919}
+  - component: {fileID: 8530959877792175961}
+  - component: {fileID: 2442355799910242910}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -31,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 426256255585811730}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 1, z: -67.80762}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -139,7 +141,7 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7339444836143983801
+--- !u!114 &7237199459806321283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,23 +150,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 426256255585811730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a059ad29fccee5e4ca6287da47c1a1bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 9dbd28d879a6b6e4396132de567e04bc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPC_Behaviour
-  agent: {fileID: 212370515670463388}
-  player: {fileID: 7406142468553869534, guid: 59bde687df40e234a8dbac5afdb832cc, type: 3}
-  patrolPoints: []
-  viewRadius: 8
-  viewAngle: 90
-  eyeHeight: 1.6
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 256
-  hearingRadius: 6
-  losePlayerTime: 3
-  viewMeshFilter: {fileID: 2956071020746864378}
-  viewMeshRenderer: {fileID: 5938392271956721791}
-  viewMeshResolution: 20
+  m_EditorClassIdentifier: Assembly-CSharp::NPCController
+  currentState: 0
+  agent: {fileID: 0}
+  patrol: {fileID: 0}
+  vision: {fileID: 0}
+  hearing: {fileID: 0}
+  losePlayerTime: 2
 --- !u!114 &1430998071554281919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +172,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCPatrol
   patrolPoints: []
+--- !u!114 &8530959877792175961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426256255585811730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06da24b4543a094d9aeb9802e300a6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCVision
+  player: {fileID: 0}
+  viewRadius: 8
+  viewAngle: 90
+  eyeHeight: 1.6
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &2442355799910242910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426256255585811730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1501be920b2934a4abdf3c170c62cb2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCViewCone
+  vision: {fileID: 8530959877792175961}
+  controller: {fileID: 7237199459806321283}
+  meshFilter: {fileID: 2956071020746864378}
+  meshRenderer: {fileID: 5938392271956721791}
+  resolution: 20
 --- !u!1 &6008467770600555897
 GameObject:
   m_ObjectHideFlags: 0

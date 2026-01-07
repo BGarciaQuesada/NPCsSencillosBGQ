@@ -55,7 +55,7 @@ public class NPCViewCone : MonoBehaviour
             }
             else
             {
-                vertices.Add(dir * vision.ViewRadius);
+                vertices.Add(transform.InverseTransformPoint(origin + dir * vision.ViewRadius));
             }
         }
 

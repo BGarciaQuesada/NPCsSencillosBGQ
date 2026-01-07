@@ -15,6 +15,20 @@ public class NPCVision : MonoBehaviour
     public bool CanSeePlayer { get; private set; }
 
     // Getter de Player para que otros scripts puedan acceder (controller)
+
+    void Start()
+    {
+        // Si no se asignó desde el inspector, buscarlo dinámicamente en escena
+        // [!] No funcionaba lo del prefab, no :(
+        if (player == null)
+        {
+            GameObject playerGO = GameObject.FindWithTag("Player");
+            if (playerGO != null)
+                player = playerGO.transform;
+            else
+                Debug.LogWarning($"{name} no encontró ningún Player con tag 'Player' en la escena.");
+        }
+    }
     public Transform Player => player;
 
     void Update()
