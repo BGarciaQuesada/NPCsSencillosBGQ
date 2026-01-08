@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 // Toda esta clase ha sido creada porque intentar asignar la dificultad directamente a MapGenerator y que esta
 // exista desde el menú principal es un infierno. Tampoco tiene sentido que algo como el generador esté en un
 // menú principal de todas formas. Si me las ingenio de otra forma, se eliminará, pero por ahora es eficiente.
-public class GameManager : MonoBehaviour
+public class DifficultySettings : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static DifficultySettings Instance { get; private set; }
 
     public int difficulty { get; private set; }
 

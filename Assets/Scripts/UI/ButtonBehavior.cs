@@ -9,6 +9,6 @@ public class ButtonBehavior : MonoBehaviour
 
     public void LoadMap()
     {
-        GameManager.Instance.StartNewGame(difficultyValue);
+        DifficultySettings.Instance.StartNewGame(difficultyValue);
     }
 }

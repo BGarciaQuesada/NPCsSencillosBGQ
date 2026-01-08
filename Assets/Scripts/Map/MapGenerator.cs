@@ -56,7 +56,7 @@ public class MapGenerator : MonoBehaviour
     // Como el Start (hasta donde sé) vuelve a cargarse cada vez que se hace load scene, no hace falta convertirlo en otro tipo
     private void Start()
     {
-        difficulty = GameManager.Instance.difficulty;
+        difficulty = DifficultySettings.Instance.difficulty;
         GenerateMap();
 
         // Una vez instanciadas todas las salas, bakear el NavMesh

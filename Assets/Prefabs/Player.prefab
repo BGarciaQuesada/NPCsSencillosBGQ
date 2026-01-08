@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6870449697297468744}
   - component: {fileID: 7299626199057304118}
-  - component: {fileID: 4745879918750164122}
   - component: {fileID: 2439365035906191396}
   m_Layer: 7
   m_Name: CamPajaro
@@ -85,14 +84,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4745879918750164122
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560732242624652457}
-  m_Enabled: 1
 --- !u!114 &2439365035906191396
 MonoBehaviour:
   m_ObjectHideFlags: 0

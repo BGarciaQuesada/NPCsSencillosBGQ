@@ -31,7 +31,13 @@ public class OrbManager : MonoBehaviour
     {
         totalOrbsCollected++;
         // Debug.Log($"Orbes totales actuales: {totalOrbsCollected}");
+
+        if (totalOrbsCollected >= totalOrbsInLevel)
+            Debug.Log("Todos los orbes recogidos");
     }
+
+    // Método flecha booleana que devuelve si los coleccionados >= totales
+    public bool AllCollected => totalOrbsCollected >= totalOrbsInLevel;
 
     // Opcional: resetear al reiniciar la partida
     public void ResetOrbs()

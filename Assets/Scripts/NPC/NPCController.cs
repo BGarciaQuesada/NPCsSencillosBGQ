@@ -31,7 +31,7 @@ public class NPCController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         patrol = GetComponent<NPCPatrol>();
         vision = GetComponent<NPCVision>();
-        hearing = GetComponent<NPCHearing>();
+        // hearing = GetComponent<NPCHearing>();
     }
 
     void Start()
@@ -49,18 +49,18 @@ public class NPCController : MonoBehaviour
                 // Prioridad: ver al jugador > oír ruido
                 if (vision.CanSeePlayer)
                     EnterChase();
-                else if (hearing.HeardNoise)
-                    EnterInvestigate();
+                //else if (hearing.HeardNoise)
+                    //EnterInvestigate();
                 break;
 
-            case NPCState.Investigate:
-                hearing.TickInvestigate();
-
-                if (vision.CanSeePlayer)
-                    EnterChase();
-                else if (!hearing.HeardNoise)
-                    EnterPatrol();
-                break;
+            //case NPCState.Investigate:
+            //    hearing.TickInvestigate();
+            //
+            //    if (vision.CanSeePlayer)
+            //        EnterChase();
+            //    //else if (!hearing.HeardNoise)
+            //        EnterPatrol();
+            //    break;
 
             case NPCState.Chase:
                 ChasePlayer();
@@ -76,11 +76,13 @@ public class NPCController : MonoBehaviour
         patrol.GoToNextPoint();
     }
 
+    /*
     void EnterInvestigate()
     {
         currentState = NPCState.Investigate;
         agent.SetDestination(hearing.NoisePosition);
     }
+    */
 
     void EnterChase()
     {

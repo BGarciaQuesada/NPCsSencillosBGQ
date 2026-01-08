@@ -94,4 +94,13 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics.CheckSphere(transform.position + Vector3.down * 0.9f, radius, groundLayer);
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            GameStateManager.Instance.LoseGame();
+        }
+    }
+
+
 }
