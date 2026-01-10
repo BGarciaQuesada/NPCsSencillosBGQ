@@ -900,9 +900,9 @@ MonoBehaviour:
   difficulty: 2
   roomSize: 20
   navMeshSurface: {fileID: 1428306360}
-  npcPrefab: {fileID: 426256255585811730, guid: 354c5ba8f4cf9b244a6c22ac2b101e22, type: 3}
-  orbPrefab: {fileID: 820325296452058281, guid: 185eeb20bdaf5e44baeafdd3dae60aaa, type: 3}
-  playerPrefab: {fileID: 4040671334803608238, guid: 59bde687df40e234a8dbac5afdb832cc, type: 3}
+  npcPrefab: {fileID: 2556856093753133964, guid: 2178f5c1ef19d4e4b892e1ba565be26e, type: 3}
+  orbPrefab: {fileID: 6484516571048068619, guid: 839c1ecb9598bf74593c1ef7bda478e3, type: 3}
+  playerPrefab: {fileID: 6360410990580748255, guid: 0397e984f3b71cf43b39580f6bcc766b, type: 3}
   playerSpawnRoomPrefab: {fileID: 3476583431012864891, guid: 9298ab341538e2147a4cabf7d78fc160, type: 3}
   playerTransform: {fileID: 0}
 --- !u!4 &740255542
