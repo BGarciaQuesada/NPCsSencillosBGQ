@@ -904,7 +904,7 @@ Transform:
   m_GameObject: {fileID: 4768886241168703416}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1287,6 +1287,7 @@ GameObject:
   - component: {fileID: 5897770355951614881}
   - component: {fileID: 9095930821234683501}
   - component: {fileID: 2652375095271594003}
+  - component: {fileID: 3671741756277492179}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1426,6 +1427,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   groundCheckDistance: 0.2
+--- !u!114 &3671741756277492179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6360410990580748255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a7ff87daf1c464b9d059ea856b5f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerLook
+  cameraTransform: {fileID: 1847209410201819576}
+  mouseSensitivity: 0.5
+  maxLookAngle: 60
 --- !u!1 &6409898007578668849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,7 +1771,7 @@ Transform:
   m_GameObject: {fileID: 8333726811262999137}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.35, z: 0.35}
+  m_LocalPosition: {x: 0, y: 0.35, z: 0.395}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

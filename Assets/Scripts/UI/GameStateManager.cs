@@ -28,13 +28,16 @@ public class GameStateManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
+    void Start()
     {
-        Time.timeScale = 1.0f;
+        CurrentState = GameState.Playing;
+        Time.timeScale = 1f;
+        SetCursorLocked(true);
     }
 
     // ---------- FINALES ----------
 
+    // [!] Esto se tiene que poderse combinar de alguna forma pero bueno, por ahora se queda así
     public void WinGame()
     {
         Debug.Log("Victoria");
@@ -43,6 +46,7 @@ public class GameStateManager : MonoBehaviour
 
         CurrentState = GameState.Victory;
         endGameUI.ShowVictory();
+        SetCursorLocked(false);
         Time.timeScale = 0f;
     }
 
@@ -54,6 +58,7 @@ public class GameStateManager : MonoBehaviour
 
         CurrentState = GameState.Defeat;
         endGameUI.ShowDefeat();
+        SetCursorLocked(false);
         Time.timeScale = 0f;
     }
 
@@ -64,4 +69,12 @@ public class GameStateManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
+
+    // ------- MANEJO DE RATÓN -------
+    void SetCursorLocked(bool locked)
+    {
+        Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !locked;
+    }
+
 }
