@@ -14,7 +14,7 @@ public class NPCViewCone : MonoBehaviour
     [SerializeField] private int resolution = 1;
 
     private Color patrolColor = new(0, 1, 0, 0.3f);
-    private Color investigateColor = new(1, 1, 0, 0.3f);
+    // private Color investigateColor = new(1, 1, 0, 0.3f); // No implementado al final...
     private Color chaseColor = new(1, 0, 0, 0.3f);
 
     private Mesh mesh;
@@ -83,7 +83,7 @@ public class NPCViewCone : MonoBehaviour
         meshRenderer.material.color = controller.currentState switch
         {
             NPCController.NPCState.Patrol => patrolColor,
-            NPCController.NPCState.Investigate => investigateColor,
+            // NPCController.NPCState.Investigate => investigateColor,
             NPCController.NPCState.Chase => chaseColor,
             _ => patrolColor // (= Cualquier otro caso en un switch C#)
         };

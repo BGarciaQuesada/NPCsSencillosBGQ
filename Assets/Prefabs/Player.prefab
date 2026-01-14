@@ -888,6 +888,7 @@ GameObject:
   - component: {fileID: 8847565622717922571}
   - component: {fileID: 321645890962337394}
   - component: {fileID: 7945091475520961852}
+  - component: {fileID: 1991028073913296092}
   m_Layer: 0
   m_Name: CamPajaro
   m_TagString: Untagged
@@ -1005,6 +1006,14 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!81 &1991028073913296092
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4768886241168703416}
+  m_Enabled: 1
 --- !u!1 &5674154142171547788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,6 +1764,7 @@ GameObject:
   - component: {fileID: 1847209410201819576}
   - component: {fileID: 4178130527267905311}
   - component: {fileID: 7093866605052765368}
+  - component: {fileID: 4291877843316245633}
   m_Layer: 0
   m_Name: CamPrimeraPers
   m_TagString: Untagged
@@ -1872,6 +1882,14 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!81 &4291877843316245633
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333726811262999137}
+  m_Enabled: 1
 --- !u!1 &8518049393458689224
 GameObject:
   m_ObjectHideFlags: 0

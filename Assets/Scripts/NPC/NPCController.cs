@@ -6,6 +6,9 @@ using UnityEngine.AI;
 public class NPCController : MonoBehaviour
 {
     // [!] Por el amor de jesucristo asignale los scripts a las cosas belen
+
+    public AudioSource NPCSeen;
+
     public enum NPCState
     {
         Patrol,   
@@ -48,7 +51,14 @@ public class NPCController : MonoBehaviour
 
                 // Prioridad: ver al jugador > oír ruido
                 if (vision.CanSeePlayer)
+                {
+                    if (NPCSeen != null)
+                    {
+                        Debug.Log("El sonido se ha encontrado");
+                        NPCSeen.Play();
+                    }
                     EnterChase();
+                }
                 //else if (hearing.HeardNoise)
                     //EnterInvestigate();
                 break;
