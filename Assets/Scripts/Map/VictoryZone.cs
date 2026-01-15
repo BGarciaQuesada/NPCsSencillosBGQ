@@ -8,7 +8,7 @@ public class VictoryZone : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
 
-        if (OrbManager.Instance.AllCollected)
+        if (OrbManager.Instance.allCollected)
         {
             GameStateManager.Instance.WinGame();
         }

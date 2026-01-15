@@ -37,10 +37,9 @@ public class GameStateManager : MonoBehaviour
 
     // ---------- FINALES ----------
 
-    // [!] Esto se tiene que poderse combinar de alguna forma pero bueno, por ahora se queda así
     public void WinGame()
     {
-        Debug.Log("Victoria");
+        Debug.Log("Victoria llamada (" + CurrentState + ")");
 
         if (CurrentState != GameState.Playing) return;
 
@@ -52,7 +51,7 @@ public class GameStateManager : MonoBehaviour
 
     public void LoseGame()
     {
-        Debug.Log("Derrota");
+        Debug.Log("Derrota llamada");
 
         if (CurrentState != GameState.Playing) return;
 

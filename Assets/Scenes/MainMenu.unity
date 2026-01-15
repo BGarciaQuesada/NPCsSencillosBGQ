@@ -1246,8 +1246,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 409.47424, y: -143.45}
-  m_SizeDelta: {x: 573.498, y: 793.11}
+  m_AnchoredPosition: {x: 432.57483, y: -143.45}
+  m_SizeDelta: {x: 619.6992, y: 793.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1225349556
 MonoBehaviour:
@@ -1270,7 +1270,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<b><i>INSTRUCCIONES:</b></i>\n\nRecoge todos los diamantes y regresa al
-    punto de inicio.\n\nCambia de c\xE1mara con Q."
+    punto de inicio.\n\n[Q] cambia de c\xE1mara.\n[Shift] para correr."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
